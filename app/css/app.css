@@ -1,0 +1,35 @@
+#main {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding: 5rem;
+}
+
+#gameBoard {
+  margin: 3rem auto;
+}
+
+#gameBoard, td {
+  border: none;
+}
+
+#gameBoard td {
+  width: 80px;
+  height: 80px;
+}
+
+#player {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background-color: black;
+}

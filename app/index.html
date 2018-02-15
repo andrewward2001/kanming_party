@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kanming Party</title>
+
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <div id="main" class="text-center">
+      <div class="container">
+        <h3 class="display-4 mb-4">Kanming Party</h3>
+        <a href="" class="btn btn-primary mb-2" id="joinGame">Join Game</a><br />
+        <a href="" class="btn btn-primary mb-2" id="hostGame">Host Game</a><br />
+        <a href="" class="btn btn-primary mb-2" id="quit">Quit</a>
+      </div>
+    </div>
+
+    <div id="gameScreen" style="display: none">
+      <table id="gameBoard">
+      </table>
+      <div id="player"></div>
+      <div class="modal fade" id="rollPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Roll</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h3 class="display-4 text-center" id="rollResult"></h3>
+              <a href="" class="btn btn-primary btn-block" id="rollDie">Roll</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="directionPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Pick Direction</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col">
+                  <a href="" class="btn btn-primary btn-block" id="opt1">Left</a>
+                </div>
+                <div class="col">
+                  <a href="" class="btn btn-primary btn-block" id="opt2">Right</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      require('./kanming_party.js')
+
+      // order is import with BS
+      const $ = jQuery = require('jquery')
+      const Popper = require('popper.js')
+      require('bootstrap')
+    </script>
+  </body>
+</html>
